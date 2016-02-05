@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tweet Fetcher</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">Eduardo Coronado</a>
+        </div>
+
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/">Results</a></li>
+                <li><a href="https://ca.linkedin.com/in/eduardo-coronado-montoya-249099a2">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Tweets</h2>
+    <p>Most popular tweets on <%= subject %> at this very moment</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width: 10%">Author</th>
+                <th style="width: 10%">@author</th>
+                <th style="width: 60%">What was said said about <mark><%= subject %></mark></th>
+                <th style="width: 20%">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        <script> var tweets = <%= tweets %> </script>
+            <% for(var i = 0; i < tweets.length; i++){ %>
+            <tr class= <%= tweets[i].score%> >
+                <td><%= tweets[i].name %></td>
+                <td>@<%= tweets[i].author %></td>
+                <td><%= tweets[i].text %></td>
+                <td><%= tweets[i].newDate %></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

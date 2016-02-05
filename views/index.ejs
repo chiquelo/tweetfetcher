@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!--<meta name="viewport" content=""width="device-width, intial-scale=1">-->
+    <!--<link rel='stylesheet' href='http://localhost:8080/public/stylesheets/style.css' />-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+  </head>
+  <body>
+    <script type="text/javascript" src="http://localhost:8080/public/javascripts/index.js"></script>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Chiquelo</a>
+        </div>
+
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Tweet Fetcher</h1>
+        <p>Find what the world is saying right now.</p>
+      </div>
+      <form>
+        What's being said on: <input id="searchBar" type="text" name="searchBar" value="IBM">
+        <input id="submitButton" type="button" value="Submit" onclick="startSearch()">
+        <script>
+          var startSearch = function(){
+            var searchBar = document.getElementById("searchBar").toHTMLElement();
+            console.log(searchBar);
+            console.log(this.document);
+          }
+
+          var searchBar = window.document.getElementById("searchBar");
+          searchBar.addEventListener("oninput", function(){
+            console.log("Chiquelo");
+            console.log(searchBar.getAttribute("value"));
+          });
+        </script>
+        <!--<input id="submitButton" type="submit" value="Submit" onClick= "<%- "hello()" %>">-->
+      </form>
+    </div>
+
+
+  </body>
+</html>

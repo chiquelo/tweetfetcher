@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweet Fetcher</title>
+    <!--<meta name="viewport" content=""width="device-width, intial-scale=1">-->
+    <!--<link rel='stylesheet' href='http://localhost:8080/public/stylesheets/style.css' />-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<script type="text/javascript" src="public/javascripts/index.js"></script>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">Eduardo Coronado</a>
+        </div>
+
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/">Results</a></li>
+                <li><a href="https://ca.linkedin.com/in/eduardo-coronado-montoya-249099a2">Contact</a> </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Tweet Fetcher</h1>
+        <p>Find what the world is saying right now.</p>
+    </div>
+    <form action="/request" method="GET">
+        What's being said on: <input id="searchBar" type="text" name="searchBar" value="IBM">
+        <input id="submitButton" type="submit" value="Submit">
+    </form>
+</div>
+
+
+</body>
+</html>
